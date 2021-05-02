@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 
-const Home = () => (
+const CrearCuenta = () => (
     <div>
         <Layout>
-            <h1>Inicio</h1>
+            <h1>Crear Cuenta</h1>
         </Layout>
     </div>
 )
 
-export default Home;
+export default CrearCuenta;
