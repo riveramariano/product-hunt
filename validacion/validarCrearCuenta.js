@@ -13,8 +13,6 @@ export default function validarCrearCuenta(valores) {
         errores.email = "Email no Valido";
     }
 
-    // !/^(ftp|http|https):\/\/[^ "]+$/)
-
     // VALIDAR EL PASSWORD
     if (!valores.password) {
         errores.password = "El Password es Obligatorio";
