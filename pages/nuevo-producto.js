@@ -42,7 +42,7 @@ const NuevoProducto = () => {
     }
 
     const handleUpload = async () => {
-        const uploadTask = await firebase.storage.ref(`products/${imagen.lastModified}${imagen.name}`).put(imagen);
+        const uploadTask = await firebase.storage.ref(`productos/${imagen.lastModified}${imagen.name}`).put(imagen);
         const downloadURL = await uploadTask.ref.getDownloadURL();
         return downloadURL;
     }
