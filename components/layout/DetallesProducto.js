@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import { es } from 'date-fns/locale';
+import Link from 'next/link';
 
 const Producto = styled.li`
     padding: 4rem;
@@ -83,7 +84,6 @@ const DetallesProducto = ({ producto }) => {
 
     const { id, comentarios, creado, descripcion, empresa, nombre, url,
         imagenUrl, votos } = producto;
-    console.log(producto);
 
     return (
         <Producto>
@@ -92,7 +92,10 @@ const DetallesProducto = ({ producto }) => {
                     <Imagen src={imagenUrl} />
                 </div>
                 <div>
-                    <Titulo>{nombre}</Titulo>
+                    {/* ROUTING DINAMICO => CARPETA DENTRO DE PAGES */}
+                    <Link href="/productos/[id]" as={`/productos/${id}`}>
+                        <Titulo>{nombre}</Titulo>
+                    </Link>
                     <TextoDescripcion>{descripcion}</TextoDescripcion>
                     <Comentarios>
                         <div>

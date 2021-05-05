@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout';
 import { FirebaseContext } from '../firebase';
 import DetallesProducto from '../components/layout/DetallesProducto';
 import styled from '@emotion/styled';
+import useProductos from '../hooks/useProductos';
 
 // TUVE QUE CREAR COMPONENTES PORQUE NO LLEGABA AL STATIC/CSS
 
@@ -23,43 +24,25 @@ const Producto = styled.ul`
 
 const Home = () => {
 
-    const [productos, setProductos] = useState([]); // STATE
-    const { firebase } = useContext(FirebaseContext); // CONTEXT
+    const { productos } = useProductos('creado');
 
-    useEffect(() => {
-        const obtenerProductos = () => {
-            firebase.db.collection('productos').orderBy('creado', 'desc').
-                onSnapshot(manejarSnapshot);
-        }
-        obtenerProductos();
-    }, []);
-
-    function manejarSnapshot(snapshot) {
-        const productos = snapshot.docs.map(doc => {
-            return {
-                id: doc.id,
-                ...doc.data()
-            }
-        });
-        setProductos(productos);
-    }
-
-    return (<div>
-        <Layout>
-            <Listado>
-                <Contenedor>
-                    <Producto>
-                        {productos.map(producto => (
-                            <DetallesProducto
-                                key={producto.id}
-                                producto={producto}
-                            />
-                        ))}
-                    </Producto>
-                </Contenedor>
-            </Listado>
-        </Layout>
-    </div>
+    return (
+        <div>
+            <Layout>
+                <Listado>
+                    <Contenedor>
+                        <Producto>
+                            {productos.map(producto => (
+                                <DetallesProducto
+                                    key={producto.id}
+                                    producto={producto}
+                                />
+                            ))}
+                        </Producto>
+                    </Contenedor>
+                </Listado>
+            </Layout>
+        </div>
     )
 }
 
