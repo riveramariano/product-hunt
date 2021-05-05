@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React from 'react';
 import Layout from '../components/layout/Layout';
-import { FirebaseContext } from '../firebase';
 import DetallesProducto from '../components/layout/DetallesProducto';
-import styled from '@emotion/styled';
 import useProductos from '../hooks/useProductos';
+import styled from '@emotion/styled';
 
 // TUVE QUE CREAR COMPONENTES PORQUE NO LLEGABA AL STATIC/CSS
 
