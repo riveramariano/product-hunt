@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Product Hunt
 
-## Getting Started
+Website link [Next Product Hunt](https://next-producthunt.vercel.app/).
 
-First, run the development server:
+## Summary
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This is my first big application usign Next, hope you liked it :), any suggestions or recommendations dm me.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scope
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Create a web page that closely resembles the real "Product Hunt" page, be able to create products, like products uploaded by different users, and be able to leave a comment on their products.
+## Functionality
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This application uses Firebase to store user information and be able to make the corresponding queries, it also uses Next.js which is a technology that allows an SSR to the web page instead of a CSR. It also contains customs hooks and normal React hooks as we have seen in other projects. The application is hosted on the official website of the creators of Next.js called Vercel.
+## Design
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The application was inspired by the "Product Hunt" page and uses mostly styled components for styles.
+### Learning 
 
-## Learn More
+In the development of this project, I learned: 
+- To use Google Firebase.
+- To create a React app using Next.
+- To create redirects using Next.
+- To host the application in Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+### Tech Stack
+- Google Firebase
+- Next.js
+- React Hooks
+- Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Run Locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Clone the repository `https://github.com/RiveraMariano/next-product-hunt.git`.
+- Open the cmd and get the project route.
+- Run `npm install` for the dependencies.
+- Run `npm start` (The project should run in the default browser).
