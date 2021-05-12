@@ -4,7 +4,7 @@ Website link [Next Product Hunt](https://next-producthunt.vercel.app/).
 
 ## Summary
 
-This is my first big application usign Next, hope you liked it :), any suggestions or recommendations dm me.
+This is my first big application using Next, hope you liked it :), any suggestions or recommendations dm me.
 
 ## Scope
 
