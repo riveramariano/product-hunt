@@ -31,7 +31,7 @@ In the development of this project, I learned:
 
 ### Run Locally
 
-- Clone the repository `https://github.com/RiveraMariano/next-product-hunt.git`.
+- Clone the repository `https://github.com/riveramariano/next-product-hunt.git`.
 - Open the cmd and get the project route.
 - Run `npm install` for the dependencies.
 - Run `npm start` (The project should run in the default browser).
